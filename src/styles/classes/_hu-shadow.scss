@@ -1,0 +1,59 @@
+@each $type, $value in $hu-shadow-types {
+  $class-name: hu-class-name(shadow-#{$type});
+  $property: box-shadow;
+  $value: if($value, $value, $type);
+
+  @if (index($hu-shadow-modules, base)) {
+    @include hu-base($class-name) {
+      #{$property}: $value;
+    }
+  }
+
+  @if (index($hu-shadow-modules, state)) {
+    @include hu-state($class-name) {
+      #{$property}: $value;
+    }
+  }
+
+  @if (index($hu-shadow-modules, hocus)) {
+    @include hu-hocus($class-name) {
+      #{$property}: $value;
+    }
+  }
+
+  @if (index($hu-shadow-modules, group-state)) {
+    @include hu-group-state($class-name) {
+      #{$property}: $value;
+    }
+  }
+
+  @if (index($hu-shadow-modules, group-hover)) {
+    @include hu-group-hover($class-name) {
+      #{$property}: $value;
+    }
+  }
+
+  @if (index($hu-shadow-modules, responsive)) {
+    @include hu-responsive($class-name) {
+      #{$property}: $value;
+    }
+
+    @if (index($hu-shadow-modules, state)) {
+      @include hu-responsive-state($class-name) {
+        #{$property}: $value;
+      }
+    }
+
+    @if (index($hu-shadow-modules, group-state)) {
+      @include hu-responsive-group-state($class-name) {
+        #{$property}: $value;
+      }
+    }
+  }
+
+  @if (index($hu-shadow-modules, print)) {
+    @include hu-print($class-name) {
+      #{$property}: $value;
+    }
+  }
+}

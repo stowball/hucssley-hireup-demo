@@ -1,0 +1,71 @@
+$hu-icon-size-modules: (base) !default;
+
+@mixin _hu-icon-size-declarations($sizes) {
+  height: nth($sizes, 1);
+  width: if(length($sizes) > 1, nth($sizes, 2), nth($sizes, 1));
+}
+
+$hu-icon-size-types: (
+  100: hu-rem(16),
+  200: hu-rem(24),
+  logo: (hu-rem(30), hu-rem(96)),
+);
+
+@each $type, $value in $hu-icon-size-types {
+  $class-name: hu-class-name(icon-size-#{$type});
+  $value: if($value, $value, $type);
+
+  @if (index($hu-icon-size-modules, base)) {
+    @include hu-base($class-name) {
+      @include _hu-icon-size-declarations($value);
+    }
+  }
+
+  @if (index($hu-icon-size-modules, state)) {
+    @include hu-state($class-name) {
+      @include _hu-icon-size-declarations($value);
+    }
+  }
+
+  @if (index($hu-icon-size-modules, hocus)) {
+    @include hu-hocus($class-name) {
+      @include _hu-icon-size-declarations($value);
+    }
+  }
+
+  @if (index($hu-icon-size-modules, group-state)) {
+    @include hu-group-state($class-name) {
+      @include _hu-icon-size-declarations($value);
+    }
+  }
+
+  @if (index($hu-icon-size-modules, group-hover)) {
+    @include hu-group-hover($class-name) {
+      @include _hu-icon-size-declarations($value);
+    }
+  }
+
+  @if (index($hu-icon-size-modules, responsive)) {
+    @include hu-responsive($class-name) {
+      @include _hu-icon-size-declarations($value);
+    }
+
+    @if (index($hu-icon-size-modules, state)) {
+      @include hu-responsive-state($class-name) {
+        @include _hu-icon-size-declarations($value);
+      }
+    }
+
+    @if (index($hu-icon-size-modules, group-state)) {
+      @include hu-responsive-group-state($class-name) {
+        @include _hu-icon-size-declarations($value);
+      }
+    }
+  }
+
+  @if (index($hu-icon-size-modules, print)) {
+    @include hu-print($class-name) {
+      @include _hu-icon-size-declarations($value);
+    }
+  }
+}

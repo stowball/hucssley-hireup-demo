@@ -27,6 +27,12 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
+### PurgeCSS
+
+1. Install Purgecss globally: `npm i -g purgecss`
+2. Create a build as above.
+3. `purgecss --config ./purgecss.config.js --out build/static/css/`
+
 ### `npm run eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
