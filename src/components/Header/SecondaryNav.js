@@ -72,6 +72,7 @@ const styles = {
   userNav: `
     bg-color-neutral-0
     display-none
+    bp-1040--border-t-width-0
     bp-1040--pin-r-0
     bp-1040--pin-t-100
     bp-1040--position-absolute
@@ -128,6 +129,7 @@ class SecondaryNav extends PureComponent {
           Messages
         </a>
         <button
+          aria-pressed={this.state.menuIsOpen}
           className={objStr({
             [styles.button]: true,
             [styles.buttonUser]: true,

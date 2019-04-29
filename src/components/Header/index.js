@@ -75,6 +75,7 @@ class Header extends PureComponent {
       })}>
         <div className={styles.container}>
           <a
+            aria-label="Hireup"
             className={styles.logo}
             href="/"
           >
@@ -85,6 +86,8 @@ class Header extends PureComponent {
           </a>
 
           <button
+            aria-label="Open navigation"
+            aria-pressed={this.state.menuIsOpen}
             className={styles.hamburger}
             onClick={this.toggleMenu}
           >
