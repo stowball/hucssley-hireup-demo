@@ -1,17 +1,3 @@
 @import "global/index";
 @import "classes/index";
 @import "reset/index";
-
-
-@include hu-parent(hu-class-name(font-size-small), "eqio-<400") {
-  font-size: small;
-}
-
-@each $type in (
-  block,
-  none,
-) {
-  @include hu-parent(hu-class-name(display-#{$type}), ("device:ios", "eqio->700"), (base, hocus, state, responsive)) {
-    display: $type;
-  }
-}
