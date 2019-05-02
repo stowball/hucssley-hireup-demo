@@ -1,5 +1,6 @@
 import React from 'react';
 import classNames from '../../classNames';
+import states from '../../states';
 
 const navItems = [
   'Dashboard',
@@ -34,7 +35,6 @@ const styles = {
     hocus--bg-color-neutral-300
     is-selected--bg-color-blue-300
   `,
-  linkIsSelected: 'is-selected',
 };
 
 const PrimaryNav = (props) => {
@@ -47,7 +47,7 @@ const PrimaryNav = (props) => {
         >
           <a
             aria-current={props.selectedIndex === index}
-            className={classNames([styles.link, props.selectedIndex === index && styles.linkIsSelected])}
+            className={classNames([styles.link, props.selectedIndex === index && states.isSelected])}
             href={`#${item}`}
           >
             {item}

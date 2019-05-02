@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 import classNames from '../../classNames';
+import states from '../../states';
 import Svg from '../Svg/';
 
 const userNavItems = [
@@ -54,7 +55,6 @@ const styles = {
     width-100
     is-active--bg-color-blue-300
   `,
-  buttonUserIsActive: 'is-active',
   button__inner: `
     align-items-center
     display-flex
@@ -77,7 +77,6 @@ const styles = {
     bp-1040-pseudo-before--dropdown-shadow-600
     is-open--display-block
   `,
-  userNavIsOpen: 'is-open',
   userNav__item: `
     border-t-color-neutral-400
     border-t-style-solid
@@ -123,7 +122,7 @@ class SecondaryNav extends PureComponent {
         </a>
         <button
           aria-pressed={this.state.menuIsOpen}
-          className={classNames([styles.button, styles.buttonUser, this.state.menuIsOpen && styles.buttonUserIsActive])}
+          className={classNames([styles.button, styles.buttonUser, this.state.menuIsOpen && states.isActive])}
           onClick={this.toggleMenu}
         >
           <span className={styles.button__inner}>
@@ -140,7 +139,7 @@ class SecondaryNav extends PureComponent {
           />
         </button>
 
-        <ul className={classNames([styles.userNav, this.state.menuIsOpen && styles.userNavIsOpen])}>
+        <ul className={classNames([styles.userNav, this.state.menuIsOpen && states.isOpen])}>
           {userNavItems.map((item) => (
             <li
               className={styles.userNav__item}

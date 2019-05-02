@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 import classNames from '../../classNames';
+import states from '../../states';
 import PrimaryNav from './PrimaryNav';
 import SecondaryNav from './SecondaryNav';
 import Svg from '../Svg/';
@@ -10,7 +11,6 @@ const styles = {
     bg-color-neutral-0
     shadow-500
   `,
-  rootIsOpen: 'is-open',
   container: `
     display-flex
     justify-content-space-between
@@ -69,7 +69,7 @@ class Header extends PureComponent {
 
   render() {
     return (
-      <header className={classNames([styles.root, this.state.menuIsOpen && styles.rootIsOpen])}>
+      <header className={classNames([styles.root, this.state.menuIsOpen && states.isOpen])}>
         <div className={styles.container}>
           <a
             aria-label="Hireup"
