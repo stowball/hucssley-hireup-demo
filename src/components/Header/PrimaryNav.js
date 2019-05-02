@@ -1,5 +1,5 @@
 import React from 'react';
-import objStr from 'obj-str';
+import classNames from '../../classNames';
 
 const navItems = [
   'Dashboard',
@@ -17,9 +17,9 @@ const styles = {
     padding-b-300
     padding-h-400
     bp-1040--flex-direction-row
-    bp-1040--padding-v-0 
+    bp-1040--padding-v-0
   `,
-  item: "display-flex",
+  item: 'display-flex',
   link: `
     align-items-center
     color-blue-1000
@@ -32,11 +32,9 @@ const styles = {
     transition-easing-ease
     transition-property-bg-color
     hocus--bg-color-neutral-300
-  `,
-  linkIsSelected: `
-    is-selected
     is-selected--bg-color-blue-300
   `,
+  linkIsSelected: 'is-selected',
 };
 
 const PrimaryNav = (props) => {
@@ -49,10 +47,7 @@ const PrimaryNav = (props) => {
         >
           <a
             aria-current={props.selectedIndex === index}
-            className={objStr({
-              [styles.link]: true,
-              [styles.linkIsSelected]: props.selectedIndex === index,
-            })}
+            className={classNames([styles.link, props.selectedIndex === index && styles.linkIsSelected])}
             href={`#${item}`}
           >
             {item}

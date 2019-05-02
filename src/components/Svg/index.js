@@ -1,5 +1,5 @@
 import React from 'react';
-import objStr from 'obj-str';
+import classNames from '../../classNames';
 
 const styles = `
   display-inline-block
@@ -12,10 +12,7 @@ const styles = `
 const Svg = (props) => {
   return (
     <svg
-      className={objStr({
-        [styles]: true,
-        [props.className]: props.className
-      })}
+      className={classNames([styles, props.className && props.className])}
       focusable="false"
       role="img"
     >

@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import objStr from 'obj-str';
+import classNames from '../../classNames';
 import Svg from '../Svg/';
 
 const userNavItems = [
@@ -45,18 +45,16 @@ const styles = {
     transition-property-bg-color
     hocus--bg-color-neutral-300
   `,
-  buttonMessages: "align-items-center",
+  buttonMessages: 'align-items-center',
   buttonUser: `
     border-t-color-neutral-400
     border-t-style-solid
     border-t-width-100
     justify-content-space-between
     width-100
-  `,
-  buttonUserIsActive: `
-    is-active
     is-active--bg-color-blue-300
   `,
+  buttonUserIsActive: 'is-active',
   button__inner: `
     align-items-center
     display-flex
@@ -77,11 +75,9 @@ const styles = {
     bp-1040--pin-t-100
     bp-1040--position-absolute
     bp-1040-pseudo-before--dropdown-shadow-600
-  `,
-  userNavIsOpen: `
-    is-open
     is-open--display-block
   `,
+  userNavIsOpen: 'is-open',
   userNav__item: `
     border-t-color-neutral-400
     border-t-style-solid
@@ -116,10 +112,7 @@ class SecondaryNav extends PureComponent {
     return (
       <div className={styles.root}>
         <a
-          className={objStr({
-            [styles.button]: true,
-            [styles.buttonMessages]: true,
-          })}
+          className={classNames([styles.button, styles.buttonMessages])}
           href="#messages"
         >
           <Svg
@@ -130,11 +123,7 @@ class SecondaryNav extends PureComponent {
         </a>
         <button
           aria-pressed={this.state.menuIsOpen}
-          className={objStr({
-            [styles.button]: true,
-            [styles.buttonUser]: true,
-            [styles.buttonUserIsActive]: this.state.menuIsOpen,
-          })}
+          className={classNames([styles.button, styles.buttonUser, this.state.menuIsOpen && styles.buttonUserIsActive])}
           onClick={this.toggleMenu}
         >
           <span className={styles.button__inner}>
@@ -151,10 +140,7 @@ class SecondaryNav extends PureComponent {
           />
         </button>
 
-        <ul className={objStr({
-          [styles.userNav]: true,
-          [styles.userNavIsOpen]: this.state.menuIsOpen,
-        })}>
+        <ul className={classNames([styles.userNav, this.state.menuIsOpen && styles.userNavIsOpen])}>
           {userNavItems.map((item) => (
             <li
               className={styles.userNav__item}
