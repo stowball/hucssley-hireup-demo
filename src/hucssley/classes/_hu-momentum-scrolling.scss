@@ -4,61 +4,23 @@
   $property: -webkit-overflow-scrolling;
   $value: touch;
 
-  @if ($module == base) {
-    @include hu-base($class-name) {
-      #{$property}: $value;
-    }
+  @include hu-generic($class-name, $module, $hu-momentum-scrolling-modules) {
+    #{$property}: $value;
   }
+}
 
-  @else if ($module == focus or $module == hocus or $module == hover) {
-    @include hu-hocus($class-name, $module) {
-      #{$property}: $value;
-    }
-  }
+@if index($hu-momentum-scrolling-modules, responsive) {
+  @each $bp-scale, $bp-value in $hu-breakpoints {
+    @media (min-width: $bp-value) {
+      @each $type, $value in $hu-momentum-scrolling-types {
+        $class-name: hu-class-name(momentum-scrolling-#{$type});
+        $property: -webkit-overflow-scrolling;
+        $value: if($value, $value, $type);
 
-  @else if ($module == state) {
-    @include hu-state($class-name) {
-      #{$property}: $value;
-    }
-  }
-
-  @else if ($module == group-hover) {
-    @include hu-group-hover($class-name) {
-      #{$property}: $value;
-    }
-  }
-
-  @else if ($module == group-state) {
-    @include hu-group-state($class-name) {
-      #{$property}: $value;
-    }
-  }
-
-  @else if ($module == responsive) {
-    @include hu-responsive($class-name) {
-      #{$property}: $value;
-    }
-
-    @if (index($hu-momentum-scrolling-modules, state)) {
-      @include hu-responsive-state($class-name) {
-        @each $property, $value in $properties {
+        @include hu-responsive($class-name, $bp-scale, $hu-momentum-scrolling-modules) {
           #{$property}: $value;
         }
       }
-    }
-
-    @if (index($hu-momentum-scrolling-modules, group-state)) {
-      @include hu-responsive-group-state($class-name) {
-        @each $property, $value in $properties {
-          #{$property}: $value;
-        }
-      }
-    }
-  }
-
-  @if ($module == staprint) {
-    @include hu-print($class-name) {
-      #{$property}: $value;
     }
   }
 }
