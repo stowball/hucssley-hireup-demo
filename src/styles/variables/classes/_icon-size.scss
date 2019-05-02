@@ -1,10 +1,5 @@
 $icon-size-modules: (base) !default;
 
-@mixin _icon-size-declarations($sizes) {
-  height: nth($sizes, 1);
-  width: if(length($sizes) > 1, nth($sizes, 2), nth($sizes, 1));
-}
-
 $icon-size-types: (
   100: hu-rem(16),
   200: hu-rem(24),

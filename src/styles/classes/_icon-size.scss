@@ -1,3 +1,8 @@
+@mixin _icon-size-declarations($sizes) {
+  height: nth($sizes, 1);
+  width: if(length($sizes) > 1, nth($sizes, 2), nth($sizes, 1));
+}
+
 @each $module in hu-format-modules($icon-size-modules) {
   @each $type, $value in $icon-size-types {
     $class-name: hu-class-name(icon-size-#{$type});
