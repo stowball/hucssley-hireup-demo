@@ -71,8 +71,8 @@ const styles = {
     bg-color-neutral-0
     display-none
     bp-1040--border-t-width-0
-    bp-1040--pin-r-0
-    bp-1040--pin-t-100
+    bp-1040--pos-r-0
+    bp-1040--pos-t-100
     bp-1040--position-absolute
     bp-1040-pseudo-before--dropdown-shadow-600
     is-open--display-block

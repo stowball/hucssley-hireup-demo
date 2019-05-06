@@ -43,9 +43,9 @@ const styles = {
   nav: `
     bg-color-neutral-0
     display-none
-    pin-l-0
-    pin-r-0
-    pin-t-100
+    pos-l-0
+    pos-r-0
+    pos-t-100
     position-absolute
     bp-1040--display-flex
     bp-1040--justify-content-space-between
