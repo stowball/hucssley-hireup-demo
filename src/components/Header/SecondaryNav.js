@@ -46,7 +46,10 @@ const styles = {
     transition-property-bg-color
     hocus--bg-color-neutral-300
   `,
-  buttonMessages: 'align-items-center',
+  buttonMessages: `
+    align-items-center
+    flex-shrink-0 // ie11
+  `,
   buttonUser: `
     border-t-color-neutral-400
     border-t-style-solid
@@ -60,6 +63,7 @@ const styles = {
     display-flex
   `,
   button__caret: `
+    align-self-center // ie11
     icon-size-100
     margin-l-200
   `,
