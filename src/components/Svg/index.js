@@ -8,11 +8,11 @@ const styles = `
   svg-fill-rule-even-odd
   vertical-align-bottom
 `;
-  
+
 const Svg = (props) => {
   return (
     <svg
-      className={classNames([styles, props.className && props.className])}
+      className={classNames([styles, props.className])}
       focusable="false"
       role="img"
     >

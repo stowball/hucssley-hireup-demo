@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import classNames from '../../classNames';
 import states from '../../states';
+import Container from '../Container';
 import PrimaryNav from './PrimaryNav';
 import SecondaryNav from './SecondaryNav';
 import Svg from '../Svg/';
@@ -14,9 +15,6 @@ const styles = {
   container: `
     display-flex
     justify-content-space-between
-    margin-h-auto
-    max-width-container
-    padding-h-600
     position-relative
     bp-1040--justify-content-flex-start
   `,
@@ -29,8 +27,6 @@ const styles = {
   hamburger: `
     align-self-center
     border-radius-1000
-    box-sizing-content-box
-    icon-size-200
     padding-300
     bp-1040--display-none
     group__is-open--bg-color-neutral-300
@@ -70,7 +66,7 @@ class Header extends PureComponent {
   render() {
     return (
       <header className={classNames([styles.root, this.state.menuIsOpen && states.isOpen])}>
-        <div className={styles.container}>
+        <Container className={styles.container}>
           <a
             aria-label="Hireup"
             className={styles.logo}
@@ -98,7 +94,7 @@ class Header extends PureComponent {
             <PrimaryNav selectedIndex={2} />
             <SecondaryNav user="Jennifer W" />
           </nav>
-        </div>
+        </Container>
       </header>
     );
   }
