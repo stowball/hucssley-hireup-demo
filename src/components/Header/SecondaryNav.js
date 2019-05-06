@@ -111,7 +111,7 @@ class SecondaryNav extends PureComponent {
     return (
       <div className={styles.root}>
         <a
-          className={classNames([styles.button, styles.buttonMessages])}
+          className={classNames(styles.button, styles.buttonMessages)}
           href="#messages"
         >
           <Svg
@@ -122,7 +122,11 @@ class SecondaryNav extends PureComponent {
         </a>
         <button
           aria-pressed={this.state.menuIsOpen}
-          className={classNames([styles.button, styles.buttonUser, this.state.menuIsOpen && states.isActive])}
+          className={classNames(
+            styles.button,
+            styles.buttonUser,
+            this.state.menuIsOpen && states.isActive,
+          )}
           onClick={this.toggleMenu}
         >
           <span className={styles.button__inner}>
@@ -139,7 +143,10 @@ class SecondaryNav extends PureComponent {
           />
         </button>
 
-        <ul className={classNames([styles.userNav, this.state.menuIsOpen && states.isOpen])}>
+        <ul className={classNames(
+          styles.userNav,
+          this.state.menuIsOpen && states.isOpen,
+        )}>
           {userNavItems.map((item) => (
             <li
               className={styles.userNav__item}

@@ -12,7 +12,7 @@ const styles = `
 const Svg = (props) => {
   return (
     <svg
-      className={classNames([styles, props.className])}
+      className={classNames(styles, props.className)}
       focusable="false"
       role="img"
     >

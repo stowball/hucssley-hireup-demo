@@ -1,1 +1,1 @@
-export default (arr) => arr.filter(Boolean).join(' ');
+export default (...args) => args.filter(Boolean).join(' ');

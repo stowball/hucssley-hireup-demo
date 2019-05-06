@@ -5,9 +5,9 @@ const styles = {
   button: {
     base: `
       font-weight-700
-      transition-property-all
       transition-duration-100
       transition-easing-ease
+      transition-property-all
     `,
     type: {
       primary: `
@@ -45,13 +45,13 @@ const styles = {
 const Button = (props) => {
   return (
     <button
-      className={classNames([
+      className={classNames(
         styles.button.base,
         styles.button.shape[props.shape],
         styles.button.size[props.size],
         styles.button.type[props.type],
         props.className,
-      ])}
+      )}
     >
       <span className={styles.span}>
         {props.children}

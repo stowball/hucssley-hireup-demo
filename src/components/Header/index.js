@@ -65,7 +65,10 @@ class Header extends PureComponent {
 
   render() {
     return (
-      <header className={classNames([styles.root, this.state.menuIsOpen && states.isOpen])}>
+      <header className={classNames(
+        styles.root,
+        this.state.menuIsOpen && states.isOpen,
+      )}>
         <Container className={styles.container}>
           <a
             aria-label="Hireup"
