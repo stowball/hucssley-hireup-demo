@@ -10,7 +10,9 @@ const styles = {
   root: `
     group
     bg-color-neutral-0
+    position-relative
     shadow-500
+    z-index-100
   `,
   container: `
     display-flex

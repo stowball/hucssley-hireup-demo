@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import Button from './components/Button/';
+import Callout from './components/Callout/';
 import Container from './components/Container/';
 import Header from './components/Header/';
 
@@ -7,7 +8,17 @@ function App() {
   return (
     <Fragment>
       <Header />
-      <Container as="main">
+      <Container
+        as="main"
+        className="margin-t-500"
+      >
+        <Callout
+          image="https://hireup.cdn.prismic.io/hireup/89e15301c28e6396927d85e38e9c5d5833ebab09_kyle_357-bonnie.png"
+          linkHref="/"
+          linkLabel="Find your connection"
+          title="Disability support workers who love what you love"
+        />
+        
         <div>
           <Button className="margin-r-500 margin-t-500">
             Primary

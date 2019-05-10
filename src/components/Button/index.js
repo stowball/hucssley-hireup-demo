@@ -8,6 +8,7 @@ const styles = {
       transition-duration-100
       transition-easing-ease
       transition-property-all
+      hocus--scale-105
     `,
     type: {
       primary: `
@@ -43,8 +44,10 @@ const styles = {
 };
 
 const Button = (props) => {
+  const El = props.href ? 'a' : 'button';
+  
   return (
-    <button
+    <El
       className={classNames(
         styles.button.base,
         styles.button.shape[props.shape],
@@ -52,11 +55,12 @@ const Button = (props) => {
         styles.button.type[props.type],
         props.className,
       )}
+      href={props.href}
     >
       <span className={styles.span}>
         {props.children}
       </span>
-    </button>
+    </El>
   );
 };
 
