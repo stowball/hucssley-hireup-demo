@@ -21,12 +21,10 @@ const styles = {
     bp-768--flex-direction-row
     bp-768--text-align-left
   `,
-  image: `
-    bg-color-blue-600
-    border-color-neutral-500
-    border-radius-1000
-    border-style-solid
-    border-width-200
+  imageWrapper: `
+    align-items-center
+    display-flex
+    justify-content-center
     margin-b-400
     width-50
     bp-600--width-30
@@ -34,6 +32,13 @@ const styles = {
     bp-768--margin-r-500
     bp-768--width-20
     bp-1040--width-16
+  `,
+  image: `
+    bg-color-blue-600
+    border-color-neutral-500
+    border-radius-1000
+    border-style-solid
+    border-width-200
   `,
   title: `
     font-size-600
@@ -48,11 +53,13 @@ const Callout = (props) => {
   return (
     <div className={classNames(styles.root, props.className)}>
       <div className={styles.callout}>
-       <img
-          alt=""
-          className={styles.image}
-          src={props.image}
-        />
+        <div className={styles.imageWrapper}>
+          <img
+            alt=""
+            className={styles.image}
+            src={props.image}
+          />
+        </div>
         <div>
           <p className={styles.title}>
             {props.title}
