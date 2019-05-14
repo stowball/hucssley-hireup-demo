@@ -11,7 +11,7 @@ const Container = (props) => {
   const El = props.as;
 
   return (
-    <El className={classNames(styles, props.className)}>
+    <El className={classNames([styles, props.className])}>
       {props.children}
     </El>
   );

@@ -51,7 +51,7 @@ const styles = {
 
 const Callout = (props) => {
   return (
-    <div className={classNames(styles.root, props.className)}>
+    <div className={classNames([styles.root, props.className])}>
       <div className={styles.callout}>
         <div className={styles.imageWrapper}>
           <img

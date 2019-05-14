@@ -48,10 +48,10 @@ const PrimaryNav = (props) => {
         >
           <a
             aria-current={props.selectedIndex === index}
-            className={classNames(
+            className={classNames([
               styles.link,
               props.selectedIndex === index && states.isSelected,
-            )}
+            ])}
             href={`#${item}`}
           >
             {item}

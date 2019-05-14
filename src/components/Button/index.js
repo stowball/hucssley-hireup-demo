@@ -48,13 +48,13 @@ const Button = (props) => {
   
   return (
     <El
-      className={classNames(
+      className={classNames([
         styles.button.base,
         styles.button.shape[props.shape],
         styles.button.size[props.size],
         styles.button.type[props.type],
         props.className,
-      )}
+      ])}
       href={props.href}
     >
       <span className={styles.span}>
