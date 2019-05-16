@@ -10,8 +10,8 @@ const styles = {
   root: `
     group
     bg-color-neutral-0
+    box-shadow-500
     position-relative
-    shadow-500
     z-index-100
   `,
   container: `
