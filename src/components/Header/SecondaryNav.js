@@ -68,6 +68,7 @@ const styles = {
     margin-l-200
   `,
   icon: `
+    border-radius-1000
     icon-size-100
     margin-r-300
   `,
