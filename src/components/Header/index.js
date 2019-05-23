@@ -45,6 +45,7 @@ const styles = {
     pos-r-0
     pos-t-100
     position-absolute
+    bp-until-1039-pseudo-before--dropdown-shadow-500
     bp-1040--display-flex
     bp-1040--justify-content-space-between
     bp-1040--position-static
@@ -52,7 +53,6 @@ const styles = {
     bp-1040-pseudo-before--display-none
     group__is-open--display-block
     group__bp-1040-is-open--display-flex
-    pseudo-before--dropdown-shadow-500
   `,
 };
 
