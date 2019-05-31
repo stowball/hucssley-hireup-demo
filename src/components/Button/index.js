@@ -4,42 +4,42 @@ import classNames from '../../classNames';
 const styles = {
   button: {
     base: `
-      font-weight-700
-      transition-duration-100
-      transition-easing-ease
-      transition-property-all
-      hocus--scale-105
+      font-weight:700
+      transition-duration:100
+      transition-easing:ease
+      transition-property:all
+      &:hocus--scale:105
     `,
     type: {
       primary: `
-        bg-color-blue-1000
-        color-neutral-0
-        hocus--bg-color-blue-600
+        bg-color:blue-1000
+        color:neutral-0
+        &:hocus--bg-color:blue-600
       `,
       secondary: `
-        bg-color-blue-300
-        hocus--bg-color-blue-400
+        bg-color:blue-300
+        &:hocus--bg-color:blue-400
       `,
     },
     shape: {
-      rounded: 'border-radius-1000',
-      square: 'border-radius-300',
+      rounded: 'border-radius:1000',
+      square: 'border-radius:300',
     },
     size: {
       medium: `
-        padding-h-400
-        padding-v-300
+        padding-horizontal:400
+        padding-vertical:300
       `,
       large: `
-        font-size-600
-        padding-h-500
-        padding-v-400
+        font-size:600
+        padding-horizontal:500
+        padding-vertical:400
       `,
     },
   },
   span: `
-    display-inline-block
-    margin-b-50
+    display:inline-block
+    margin-bottom:50
   `,
 };
 

@@ -10,7 +10,7 @@ function App() {
       <Header />
       <Container
         as="main"
-        className="margin-t-500"
+        className="margin-top:500"
       >
         <Callout
           image="https://hireup.cdn.prismic.io/hireup/89e15301c28e6396927d85e38e9c5d5833ebab09_kyle_357-bonnie.png"
@@ -20,12 +20,12 @@ function App() {
         />
         
         <div>
-          <Button className="margin-r-500 margin-t-500">
+          <Button className="margin-right:500 margin-top:500">
             Primary
           </Button>
 
           <Button
-            className="margin-r-500 margin-t-500"
+            className="margin-right:500 margin-top:500"
             type="secondary"
           >
             Secondary
@@ -34,14 +34,14 @@ function App() {
 
         <div>
           <Button
-            className="margin-r-500 margin-t-500"
+            className="margin-right:500 margin-top:500"
             shape="rounded"
           >
             Primary Rounded
           </Button>
 
           <Button
-            className="margin-r-500 margin-t-500"
+            className="margin-right:500 margin-top:500"
             shape="rounded"
             type="secondary"
           >
@@ -51,7 +51,7 @@ function App() {
 
         <div>
           <Button
-            className="margin-r-500 margin-t-500"
+            className="margin-right:500 margin-top:500"
             size="large"
             type="primary"
           >
@@ -59,7 +59,7 @@ function App() {
           </Button>
 
           <Button
-            className="margin-r-500 margin-t-500"
+            className="margin-right:500 margin-top:500"
             size="large"
             type="secondary"
           >
@@ -69,7 +69,7 @@ function App() {
 
         <div>
           <Button
-            className="margin-r-500 margin-t-500"
+            className="margin-right:500 margin-top:500"
             shape="rounded"
             size="large"
             type="primary"
@@ -78,7 +78,7 @@ function App() {
           </Button>
 
           <Button
-            className="margin-r-500 margin-t-500"
+            className="margin-right:500 margin-top:500"
             shape="rounded"
             size="large"
             type="secondary"
