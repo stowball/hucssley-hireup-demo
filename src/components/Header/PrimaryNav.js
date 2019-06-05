@@ -32,9 +32,9 @@ const styles = {
     padding:400
     transition-duration:300
     transition-easing:ease
-    transition-property:bg-color
-    &:hocus--bg-color:neutral-300
-    is-selected--bg-color:blue-300
+    transition-property:background-color
+    &:hocus--background-color:neutral-300
+    is-selected--background-color:blue-300
   `,
 };
 

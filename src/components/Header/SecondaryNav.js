@@ -43,8 +43,8 @@ const styles = {
     padding:400
     transition-duration:300
     transition-easing:ease
-    transition-property:bg-color
-    &:hocus--bg-color:neutral-300
+    transition-property:background-color
+    &:hocus--background-color:neutral-300
   `,
   buttonMessages: `
     align-items:center
@@ -56,7 +56,7 @@ const styles = {
     border-top-width:100
     justify-content:space-between
     width:100
-    is-active--bg-color:blue-300
+    is-active--background-color:blue-300
   `,
   button__inner: `
     align-items:center
@@ -73,7 +73,7 @@ const styles = {
     margin-right:300
   `,
   userNav: `
-    bg-color:neutral-0
+    background-color:neutral-0
     display:none
     is-open--display:block
     @mq-1040--border-top-width:0
@@ -98,7 +98,7 @@ const styles = {
     transition-property:all
     @mq-1040--padding-horizontal:500
     @mq-1040--padding-vertical:400
-    &:hocus--bg-color:neutral-200
+    &:hocus--background-color:neutral-200
     &:hocus--color:neutral-900
   `,
 };

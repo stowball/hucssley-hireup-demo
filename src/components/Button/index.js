@@ -12,13 +12,13 @@ const styles = {
     `,
     type: {
       primary: `
-        bg-color:blue-1000
+        background-color:blue-1000
         color:neutral-0
-        &:hocus--bg-color:blue-600
+        &:hocus--background-color:blue-600
       `,
       secondary: `
-        bg-color:blue-300
-        &:hocus--bg-color:blue-400
+        background-color:blue-300
+        &:hocus--background-color:blue-400
       `,
     },
     shape: {
